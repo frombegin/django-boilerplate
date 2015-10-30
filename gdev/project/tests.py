@@ -14,5 +14,3 @@ class ModelTestCase(TestCase):
         self.assertEquals(1, Project.objects.count())
         Project.objects.all().delete()
         self.assertEquals(0, Project.objects.count())
-
-

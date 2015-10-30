@@ -5,6 +5,7 @@ from django.db import models
 from django.conf import settings
 from ..common.abstract_models import TimestampedModel
 
+
 class ProjectManager(models.Manager):
     pass
 
