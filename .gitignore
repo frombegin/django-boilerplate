@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 
 ### Pycharm files
-.idea
+.idea/
 
 ### django sqlite3 file
 db.sqlite3
