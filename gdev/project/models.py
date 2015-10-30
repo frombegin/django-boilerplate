@@ -7,7 +7,11 @@ from ..common.abstract_models import TimestampedModel
 
 
 class ProjectManager(models.Manager):
-    pass
+    def popular(self):
+        pass
+
+    def newest(self):
+        return self.order_by("-created_at")
 
 
 class Project(TimestampedModel):

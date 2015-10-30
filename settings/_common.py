@@ -48,8 +48,9 @@ DJANGO_APPS = (
 )
 
 PROJECT_APPS = (
-    'gdev.project',
     'gdev.user',
+    'gdev.project',
+    'gdev.notification',
 )
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
