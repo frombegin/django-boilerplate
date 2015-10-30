@@ -3,13 +3,13 @@
 
 from django.db import models
 from django.conf import settings
-
+from ..common.abstract_models import TimestampedModel
 
 class ProjectManager(models.Manager):
     pass
 
 
-class Project(models.Model):
+class Project(TimestampedModel):
     name = models.CharField(max_length=128)
     members = models.ManyToManyField(settings.AUTH_USER_MODEL, through='Membership')
 
