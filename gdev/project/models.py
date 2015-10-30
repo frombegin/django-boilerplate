@@ -21,8 +21,18 @@ class Project(TimestampedModel):
 
 
 class Membership(models.Model):
+    APPLYING = 0
+    APPROVED = 1
+    DENIED = 2
+
+    STATUS_CHOICES = (
+        (APPLYING, 'Applying'),
+        (APPROVED, 'Approved'),
+        (DENIED, 'Denied'),
+    )
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     project = models.ForeignKey(Project)
-    date_joined = models.DateField()
+    date_joined = models.DateField(auto_now_add=True)
     invite_reason = models.CharField(max_length=64)
-    status = models.IntegerField(default=0)
+    status = models.IntegerField(default=0, choices=STATUS_CHOICES)
